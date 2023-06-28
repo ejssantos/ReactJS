@@ -1,0 +1,17 @@
+React Router Dom v6
+Introdução
+Fala Cod3rs, tudo bom?
+
+Então, neste pequeno artigo falaremos sobre as mudanças que houveram no react-router-dom na sua versão mais recente (v6).
+
+Instalação
+Para iniciarmos, precisamos instalar a versão mais recente do react-router-dom ok? O comando para isso é o seguinte:
+
+npm remove react-router-dom
+O comando acima remove qualquer versão antiga existente do react-router-dom em seu projeto.
+
+npm install react-router-dom@6
+Já este aqui instala a versão mais recente em seu projeto. Aguarde o processo de instalação e logo em seguida já podemos começar a fazer as alterações em nossos arquivos.
+
+Arquivo App.jsx
+O Seu arquivo app.jsx adicionaremos o modo de navegação, que ficara da seguinte forma:

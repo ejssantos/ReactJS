@@ -1,0 +1,25 @@
+.App .Cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+  /* Force table to not be like tables anymore */
+  table{
+    width: 100%;
+  }
+  tbody{
+    border: none;
+    width: 100%;
+    left: 0px;
+    text-align: right;
+  }
+  tr{
+    border: none;
+    width: 100%;
+    text-align: left;
+  }
+  td{
+    border: none;
+    text-align: left;
+  }

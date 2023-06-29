@@ -1,12 +1,21 @@
-import React, {useState} from 'react'
-import PageTitle from '../../components/layout/PageTitle'
+import React, {useState, useCallback} from 'react';
+import PageTitle from '../../components/layout/PageTitle';
+import UseCallbackButtons from './UseCallbackButtons';
 
 const UseCallback = (props) => {
     const [count, setCount] = useState(0);
 
+    // Hook: UseCallback
+    // Dessa forma evita renderização.
+    const inc = useCallback(function (delta) {
+        setCount(curr => curr + delta);
+    }, [setCount]);
+
+    /*
     function inc(delta) {
         setCount(count + delta);
     }
+    */
 
     return (
         <div className="UseCallback">
@@ -17,11 +26,10 @@ const UseCallback = (props) => {
 
             <div className='center'>
                 <span className="text">{count}</span>
-
-
+                <UseCallbackButtons inc={inc} />
             </div>
         </div>
     )
 }
 
-export default UseCallback
+export default UseCallback;

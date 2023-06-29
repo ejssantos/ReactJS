@@ -1,0 +1,5 @@
+Dracula
+Visual Studio IntelliCode (com Inteligência Artificial)
+TabNine
+Bracket Pair Colorization Toggler
+HTML CSS Support

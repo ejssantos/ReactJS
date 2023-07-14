@@ -3,6 +3,7 @@ import PageTitle from '../../components/layout/PageTitle';
 import SectionTitle from '../../components/layout/SectionTitle';
 
 import { initialState, reducer } from '../../store';
+import { numberAdd2, login } from '../../store/actions';
 
 //Exercício 01
 /*
@@ -81,8 +82,12 @@ const UseReducer = (props) => {
                 
                 <span className="text">{state.number}</span>
                 <div>
-                    <button className="btn" onClick={() => dispatch({type: "login", payload: "Eduardo"})}>Login</button>
-                    <button className="btn" onClick={() => dispatch({type: "numberAdd2"})}>+2</button>
+                    {/*<button className="btn" onClick={() => dispatch({type: "login", payload: "Eduardo"})}>Login</button>*/}
+                    <button className="btn" onClick={() => login(dispatch, "Eduardo José")}>Login</button>
+                    
+                    {/*<button className="btn" onClick={() => dispatch({type: "numberAdd2"})}>+2</button>*/}
+                    <button className="btn" onClick={() => numberAdd2(dispatch)}>+2</button>
+                    
                     <button className="btn" onClick={() => dispatch({type: "numberMulti7"})}>*7</button>
                     <button className="btn" onClick={() => dispatch({type: "numberDiv25"})}>/25</button>
                     <button className="btn" onClick={() => dispatch({type: "numberInt"})}>Int</button>

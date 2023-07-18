@@ -1,4 +1,4 @@
-import reducer from './reducers';
+import { allReducers } from './reducers';
 
 const initialState = {
     cart: [],
@@ -9,5 +9,5 @@ const initialState = {
 
 export {
     initialState,
-    reducer
+    allReducers
 }

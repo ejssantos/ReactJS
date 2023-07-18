@@ -2,8 +2,9 @@ import React, { useReducer } from 'react';
 import PageTitle from '../../components/layout/PageTitle';
 import SectionTitle from '../../components/layout/SectionTitle';
 
-import { initialState, reducer } from '../../store';
-import { numberAdd2, login } from '../../store/actions';
+import { initialState, allReducers } from '../../store';
+import { numberAdd2, numberMulti7, login } from '../../store/actions';
+import { numberAddN, numberDiv25, numberInt } from '../../store/actions/number';
 
 //Exercício 01
 /*
@@ -61,7 +62,8 @@ function reducer2(state2, action2) {
 
 const UseReducer = (props) => {
     //Exercício 01
-    const [state, dispatch] = useReducer(reducer, initialState);
+    //const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(allReducers, initialState);
 
     //Exercício 02
     const [state2, dispatch2] = useReducer(reducer2, initialState2);
@@ -88,11 +90,19 @@ const UseReducer = (props) => {
                     {/*<button className="btn" onClick={() => dispatch({type: "numberAdd2"})}>+2</button>*/}
                     <button className="btn" onClick={() => numberAdd2(dispatch)}>+2</button>
                     
-                    <button className="btn" onClick={() => dispatch({type: "numberMulti7"})}>*7</button>
+                    <button className="btn" onClick={() => numberMulti7(dispatch)}>*7</button>
+                    <button className="btn" onClick={() => numberDiv25(dispatch)}>/25</button>
+                    <button className="btn" onClick={() => numberInt(dispatch)}>Int</button>
+                    <button className="btn" onClick={() => numberAddN(dispatch, -9)}>-9</button>
+                    <button className="btn" onClick={() => numberAddN(dispatch, 11)}>+11</button>
+
+{/*                 
+                    <button className="btn" onClick={() => dispatch({type: "numberMulti7"})}>/*7</button>
                     <button className="btn" onClick={() => dispatch({type: "numberDiv25"})}>/25</button>
                     <button className="btn" onClick={() => dispatch({type: "numberInt"})}>Int</button>
                     <button className="btn" onClick={() => dispatch({type: "numberAddN", payload: -9})}>-9</button>
                     <button className="btn" onClick={() => dispatch({type: "numberAddN", payload: 11})}>+11</button>
+ */}                
                 </div>
             </div>
 

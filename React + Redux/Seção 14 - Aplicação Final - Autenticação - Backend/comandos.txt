@@ -1,0 +1,7 @@
+Instruções utilizadas na Seção 14 - Aplicação Final - Autenticação - Backend
+
+    Baixando Repositório
+        git clone -b before_auth https://github.com/cod3rcursos/curso-react-redux
+
+    Instalando as dependências
+        npm i --save bcrypt@1.0.2 jsonwebtoken@7.3.0
